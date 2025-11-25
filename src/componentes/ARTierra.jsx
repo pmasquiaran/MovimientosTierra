@@ -40,7 +40,7 @@ function ARTierra() {
 						class="planeta"
 						id="tierra-container"
 						position="0 0 0"
-						rotation="-45 0 0"
+						rotation="0 0 0"
 						scale="0.05 0.05 0.05"
 						gltf-model="/modelo/tierra-movimientos.glb"
 						transparent-model="value: 0.9"
