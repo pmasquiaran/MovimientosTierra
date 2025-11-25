@@ -28,12 +28,12 @@ function ARTierra() {
 					control-planeta="target: tierra-container"
 				>
 
-					<a-circle
+					<a-plane
 						position="0 0 -0.75"
 						rotation="-45 0 0"
 						radius="1.5"
 						material="src: url(/textura/nebula.webp); opacity: 0.6; transparent: true; shader: standard; side: double; roughness: 1; metalness: 0;"
-					></a-circle>
+					></a-plane>
 
 					<a-entity
 						class="planeta"
