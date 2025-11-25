@@ -30,7 +30,7 @@ function ARTierra() {
 
 					<a-circle
 						position="0 0 -1.5"
-						rotation="-45 0 0"
+						rotation="-135 0 0"
 						radius="1.5"
 						material="src: url(/textura/nebula.webp); opacity: 0.6; transparent: true; shader: standard; side: double; roughness: 1; metalness: 0;"
 					></a-circle>
