@@ -13,13 +13,8 @@ function ARTierra() {
 					arjs-camera="smooth: true; smoothCount: 5; smoothTolerance: 0.01; smoothThreshold: 2;"
 				></a-entity>
 
-				<a-entity
-					light="type: ambient; intensity: 2;"
-				></a-entity>
-
-				<a-entity
-					environment="preset: default; lighting: ambient;"
-				></a-entity>
+				<a-entity light="type: ambient; intensity: 3;"></a-entity>
+				<a-entity light="type: hemisphere; intensity: 1.5; groundColor: #ffffff;"></a-entity>
 
 				<a-marker
 					type="pattern"
@@ -33,17 +28,17 @@ function ARTierra() {
 					control-planeta="target: tierra-container"
 				>
 
-<a-circle
-	position="0 0 -0.25"
-	rotation="-45 0 0"
-	radius="1.5"
-	material="color: #ffffff; opacity: 0.6; transparent: true; depthTest: true; depthWrite: true"
-></a-circle>
+					<a-circle
+						position="0 0 -0.5"
+						rotation="-45 0 0"
+						radius="1.5"
+						material="src: url(/assets/texturas/nebula.jpg); opacity: 0.6; transparent: true; shader: standard; side: double; roughness: 1; metalness: 0;"
+					></a-circle>
 
 					<a-entity
 						class="planeta"
 						id="tierra-container"
-						position="0 0 0.25"
+						position="0 0.25 0.25"
 						rotation="-45 0 0"
 						scale="0.05 0.05 0.05"
 						gltf-model="/modelo/tierra-movimientos.glb"
