@@ -29,16 +29,16 @@ function ARTierra() {
 				>
 
 					<a-circle
-						position="0 0 -0.5"
+						position="0 0.25 -0.5"
 						rotation="-45 0 0"
-						radius="1.5"
-						material="src: url(/assets/texturas/nebula.jpg); opacity: 0.6; transparent: true; shader: standard; side: double; roughness: 1; metalness: 0;"
+						radius="2"
+						material="src: url(/textura/nebula.webp); opacity: 0.6; transparent: true; shader: standard; side: double; roughness: 1; metalness: 0;"
 					></a-circle>
 
 					<a-entity
 						class="planeta"
 						id="tierra-container"
-						position="0 0.25 0.25"
+						position="0 0.25 0"
 						rotation="-45 0 0"
 						scale="0.05 0.05 0.05"
 						gltf-model="/modelo/tierra-movimientos.glb"
