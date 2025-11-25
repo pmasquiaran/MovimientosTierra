@@ -1,0 +1,6 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Permissions-Policy = "camera=(self), microphone=()"
+    Feature-Policy = "camera 'self'"
+    Referrer-Policy = "strict-origin"

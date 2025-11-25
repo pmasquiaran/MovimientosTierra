@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<title>propotipo-ar-js</title>
+		<!-- A-FRAME (global, requerido por AR.js) -->
+		<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+		<!-- AR.JS (versión para A-Frame) -->
+		<script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.jsx"></script>
+		<script>
+			/**/
+			AFRAME.registerComponent('control-planeta', {
+
+				schema: { target: { type: 'string' } },
+
+				init: function () {
+
+					const marker = this.el;
+					const planetaId = this.data.target;
+
+					marker.addEventListener('markerFound', () => {
+						// Ocultar todos los planetas
+						document.querySelectorAll('.planeta').forEach(p => {
+						p.setAttribute('visible', false);
+						});
+						// Mostrar solo el que corresponde
+						document.querySelector('#' + planetaId).setAttribute('visible', true);
+					});
+
+					marker.addEventListener('markerLost', () => {
+						// Ocultar el planeta cuando se pierde el marcador
+						document.querySelector('#' + planetaId).setAttribute('visible', false);
+					});
+
+				}
+
+			});
+
+			AFRAME.registerComponent("transparent-model", {
+
+				schema: { value: { type: "number", default: 0.9 } }, // 0 = invisible, 1 = opaco
+
+				init() {
+					this.el.addEventListener("model-loaded", () => {
+						const mesh = this.el.getObject3D("mesh");
+						mesh.traverse((node) => {
+							if (node.material) {
+								node.material.transparent = true;
+								node.material.opacity = this.data.value;
+							}
+						});
+					});
+				}
+
+			});
+			/**/
+		</script>
+	</body>
+</html>
