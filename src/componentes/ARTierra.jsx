@@ -27,7 +27,7 @@ function ARTierra() {
 					smoothThreshold="2"
 					control-planeta="target: tierra-container"
 				>
-
+{/*
 					<a-plane
 						position="0 0 -0.75"
 						rotation="-45 0 0"
@@ -35,7 +35,7 @@ function ARTierra() {
 						width="6"
 						material="src: url(/textura/nebula.webp); opacity: 0.6; transparent: true; shader: standard; side: double; roughness: 1; metalness: 0;"
 					></a-plane>
-
+*/}
 					<a-entity
 						class="planeta"
 						id="tierra-container"
