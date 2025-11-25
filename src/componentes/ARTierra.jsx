@@ -36,7 +36,7 @@ function ARTierra() {
 <a-circle
 	position="0 0 -0.25"
 	rotation="-45 0 0"
-	radius="2.0"
+	radius="1.5"
 	material="color: #ffffff; opacity: 0.6; transparent: true; depthTest: true; depthWrite: true"
 ></a-circle>
 
